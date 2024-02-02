@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+.table {
+  position: relative;
+  border-collapse: collapse;
+  width: 50%;
+}
+td {
+  border: 1px solid black;
+}
+th {
+  border: 1px solid black;
+}
+.thead {
+  background-color: rgb(105, 105, 235);
+}
+.about {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#form {
+  background-color: rgb(229, 137, 137);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 20%;
+  height: 400px;
+  position: absolute;
+  margin-left: 10px;
+  right: 5%;
+}
+#form input {
+  margin: 0 auto;
+  min-height: 10%;
+  min-width: 80%;
+}
+#form textarea {
+  height: 30%;
+}
+#pagination {
+  margin-top: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+#checkBoxContainer input {
+  width: 50px;
+}
+@media only screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column; /* Изменяем направление на столбец */
+  }
+}
+@media only screen and (max-width: 900px) {
+  #form {
+    width: 10%; /* Занимает всю доступную ширину */
+  }
+  #form input {
+    width: 10%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  #form button {
+    font-size: 50%;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
